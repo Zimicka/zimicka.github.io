@@ -20,6 +20,39 @@
 
         V roce 1997 byl na autosalonu v Ženevě představen prototyp Audi A8 Coupé. Ten se však do výroby nikdy nedostal. Mělo jít o konkurenta pro vůz BMW 8.</p>
     <a href="w3schools.com">Odkaz na W3Schools</a>    
+    <script>
+        let r = 0, g = 0, b = 0;
+        let step = 1;
 
+        function changeColor() {
+            // Change the RGB values
+            r += step;
+            g += step;
+            b += step;
+
+            // Reset the colors if they go out of bounds
+            if (r > 255 || r < 0) {
+                step = -step;
+                r = Math.max(0, Math.min(255, r));
+            }
+            if (g > 255 || g < 0) {
+                step = -step;
+                g = Math.max(0, Math.min(255, g));
+            }
+            if (b > 255 || b < 0) {
+                step = -step;
+                b = Math.max(0, Math.min(255, b));
+            }
+
+            // Set the background color
+            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+
+            // Call the function again
+            requestAnimationFrame(changeColor);
+        }
+
+        // Start the color change
+        changeColor();
+    </script>
 </body>
 </html>
