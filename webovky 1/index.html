@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            color: white;
+            font-size: 2em;
+            animation: colorChange 10s infinite alternate;
+        }
+
+        @keyframes colorChange {
+            0% { background-color: rgb(255, 0, 0); }   /* Red */
+            25% { background-color: rgb(0, 255, 0); }  /* Green */
+            50% { background-color: rgb(0, 0, 255); }  /* Blue */
+            75% { background-color: rgb(255, 255, 0); } /* Yellow */
+            100% { background-color: rgb(255, 0, 255); } /* Magenta */
+        }
+    </style>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moje první webovka</title>
@@ -19,40 +41,6 @@
     <p>Celá karoserie je vyrobena z hliníku za použití hliníkového příhradového rámu – Audi Space Frame, který značně snižuje hmotnost vozu, zvyšuje tuhost karoserie, zajišťuje vysokou bezpečnost vozidla a v neposlední řadě nepodléhá korozi, jako konvenční ocelové karoserie jiných výrobců. Kvalita materiálů a lícování je u tohoto vozu na velmi vysoké úrovni. Původně začínala nabídka s motory 2.8 (128 kW) a 4.2 (220 kW). O rok později se objevil motor 3.7 (169 kW). V roce 1996 byl motor 2.8 upraven na výkon 142 kW. První S8 dostalo do vínku také motor 4.2, upravený na výkon 250 kW. Od roku 1998 je v nabídce dieselový motor TDI o objemu 2.5 a výkonu 110 kW a o rok později byly všechny zážehové motory přepracovány a byl zvýšen výkon. V roce 2000 byl upraven i vznětový agregát na výkon 132 kW a objevil se i nový 3.3 TDI o výkonu 165 kW. V roce 2001 doplnil nabídku benzínových jednotek motor 6.0 o výkonu 309 kW. O rok později přišla na trh druhá generace.
 
         V roce 1997 byl na autosalonu v Ženevě představen prototyp Audi A8 Coupé. Ten se však do výroby nikdy nedostal. Mělo jít o konkurenta pro vůz BMW 8.</p>
-    <a href="w3schools.com">Odkaz na W3Schools</a>    
-    <script>
-        let r = 0, g = 0, b = 0;
-        let step = 1;
-
-        function changeColor() {
-            // Change the RGB values
-            r += step;
-            g += step;
-            b += step;
-
-            // Reset the colors if they go out of bounds
-            if (r > 255 || r < 0) {
-                step = -step;
-                r = Math.max(0, Math.min(255, r));
-            }
-            if (g > 255 || g < 0) {
-                step = -step;
-                g = Math.max(0, Math.min(255, g));
-            }
-            if (b > 255 || b < 0) {
-                step = -step;
-                b = Math.max(0, Math.min(255, b));
-            }
-
-            // Set the background color
-            document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-
-            // Call the function again
-            requestAnimationFrame(changeColor);
-        }
-
-        // Start the color change
-        changeColor();
-    </script>
+    <a href="w3schools.com">Odkaz na W3Schools</a>
 </body>
 </html>
